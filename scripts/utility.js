@@ -1,13 +1,26 @@
-//hide the home screen
+//hide the screen
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
 
-//show the playground screen
+//show the screen
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
+}
+
+//get the elements value
+function getElementsValueById(elementId) {
+    const element = document.getElementById(elementId);
+    const elementValue = parseInt(element.innerText);
+    return elementValue;
+}
+
+//set the elements value
+function setElementsValueById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.innerText = value;
 }
 
 //highlight the random alphabet

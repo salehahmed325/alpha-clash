@@ -6,23 +6,26 @@ function keyupEvent(event) {
     //point and life calculation
     if (keyPressed == keyToBePressed) {
         //current score
-        const score = document.getElementById('score');
-        const scoreValue = parseInt(score.innerText);
-        const newScore = scoreValue + 1;
-        //show current score
-        score.innerText = newScore;
+        const score = getElementsValueById('score');
+        //increase score
+        const newScore = score + 1;
+        //show new score
+        setElementsValueById('score', newScore);
         //start second round
         removeHighlightAlphabets(keyToBePressed);
         gameLoop();
     }
     else {
-        console.log("no point");
         //current life
-        const life = document.getElementById('life');
-        const lifeValue = parseInt(life.innerText);
-        const newLife = lifeValue - 1;
+        const life = getElementsValueById('life');
+        //decrease life
+        const newLife = life - 1;
         //show current life
-        life.innerText = newLife;
+        setElementsValueById('life', newLife);
+        if (newLife === 0) {
+            //show the final score screen
+            gameOver();
+        }
     }
 }
 
@@ -44,8 +47,21 @@ function gameLoop() {
 function start() {
     //hide the home screen
     hideElementById('home');
+    //hide the final score screen
+    hideElementById('final-score');
     //show the game screen
     showElementById('play-ground');
     //start the game loop
     gameLoop();
+}
+
+//game over function
+function gameOver() {
+    //hide the playground  screen
+    hideElementById('play-ground');
+    //show the game over screen
+    showElementById('final-score');
+    //show the total score
+    const totalScore = getElementsValueById('score')
+    setElementsValueById('total-score', totalScore);
 }

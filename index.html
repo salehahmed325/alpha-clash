@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Daisy UI and Tailwind-->
+    <!-- Daisy UI and Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--Custom CSS-->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -22,7 +22,7 @@
                 <button onclick="start()" class="btn btn-white poppins-semibol text-2xl">Start</button>
             </div>
         </section>
-        <!--Playground Section-->
+        <!-- Playground Section -->
         <section id="play-ground" class="flex flex-col gap-11 pt-10 hidden">
             <!-- Screen -->
             <div class="flex flex-col justify-center items-center">
@@ -89,11 +89,11 @@
                 </div>
             </div>
         </section>
-        <!--Score Section-->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <!-- Final Score Section -->
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="flex flex-col justify-center items-center gap-3 w-[396px] h-72 glass rounded-2xl bg-[#FFFFFF33]">
-                <h1 class="poppins-extrabold text-[64px] text-white">Score : <span>14</span></h1>
-                <button class="btn btn-white text-[#010313] poppins-semibold text-2xl">Play Again</button>
+                <h1 class="poppins-extrabold text-[64px] text-white">Score : <span id="total-score">14</span></h1>
+                <button onclick="start()" class="btn btn-white text-[#010313] poppins-semibold text-2xl">Play Again</button>
                 <p class="text-white text-xl poppins-medium">Practice will make you Pro</p>
             </div>
         </section>
