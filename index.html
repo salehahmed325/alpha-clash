@@ -18,7 +18,7 @@
         <section id="home" class="min-h-screen text-white flex justify-center items-center">
             <div class="flex flex-col gap-10 items-center">
                 <h1 class="anton-regular text-[170px]">ALPHABET CLASH</h1>
-                <p class="poppins-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <p class="poppins-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Start</p>
                 <button onclick="start()" class="btn btn-white poppins-semibol text-2xl">Start</button>
             </div>
         </section>
@@ -73,17 +73,19 @@
                     <kbd id="/" class="kbd">/</kbd>
                 </div>
             </div>
-            <!-- Line and Score -->
+            <!-- Life and Score -->
             <div class="flex items-center pr-28 pl-28 justify-between">
-                <div class="w-32 h-14 bg-[#894189] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
-                    Live
+                <!-- Life -->
+                <div class="w-36 h-14 bg-[#894189] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
+                    Life
                     <img src="images/life.svg" alt="">
-                    <span>1</span>
+                    <span id="life">5</span>
                 </div>
-                <div class="w-32 h-14 bg-[#360490] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
+                <!-- Score -->
+                <div class="w-36 h-14 bg-[#360490] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
                     Score
                     <img src="images/score.svg" alt="">
-                    <span>1</span>
+                    <span id="score">0</span>
                 </div>
             </div>
         </section>
