@@ -1,3 +1,23 @@
+//keyboard event function
+function keyupEvent(event) {
+    const keyPressed = event.key;
+    const keyToPress = document.getElementById('alphabet-to-show');
+    const keyToBePressed = keyToPress.innerText;
+
+    //point and life calculation
+    if (keyPressed == keyToBePressed) {
+        console.log("point");
+        removeHighlightAlphabets(keyToBePressed);
+        gameLoop();
+    }
+    else {
+        console.log("no point");
+    }
+}
+
+//keyboard event
+document.addEventListener('keyup', keyupEvent);
+
 //function for the game
 function gameLoop() {
     //get the random alphabet
@@ -9,11 +29,10 @@ function gameLoop() {
 
     //highlight the random alphabet
     highlightAlphabets(alphabet);
-
 }
 
 //function for the home screen play now button
-function playNow() {
+function start() {
 
     //hide the home screen
     hideElementById('home');
