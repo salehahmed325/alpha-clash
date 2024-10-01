@@ -6,6 +6,10 @@ function gameLoop() {
     //show the random alphabet
     const showAlphabet = document.getElementById('alphabet-to-show');
     showAlphabet.innerText = alphabet;
+
+    //highlight the random alphabet
+    highlightAlphabets(alphabet);
+
 }
 
 //function for the home screen play now button

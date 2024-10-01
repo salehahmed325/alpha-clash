@@ -10,6 +10,12 @@ function showElementById(elementId) {
     element.classList.remove('hidden');
 }
 
+//highlight the random alphabet
+function highlightAlphabets(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('highlight-alphabet');
+}
+
 //generate random alphabet for playground
 function getARandomAlphabet(){
 
