@@ -27,6 +27,11 @@ function keyupEvent(event) {
             gameOver();
         }
     }
+
+    //press Esc to stop the game
+    if (keyPressed == 'Escape') {
+        gameOver();
+    }
 }
 
 //keyboard event
@@ -37,8 +42,7 @@ function gameLoop() {
     //get the random alphabet
     const alphabet = getARandomAlphabet();
     //show the random alphabet
-    const showAlphabet = document.getElementById('alphabet-to-show');
-    showAlphabet.innerText = alphabet;
+    setElementsValueById('alphabet-to-show', alphabet);
     //highlight the random alphabet
     highlightAlphabets(alphabet);
 }
@@ -51,6 +55,9 @@ function start() {
     hideElementById('final-score');
     //show the game screen
     showElementById('play-ground');
+    //reset life and score
+    setElementsValueById('life', 5);
+    setElementsValueById('score', 0);
     //start the game loop
     gameLoop();
 }
@@ -64,4 +71,7 @@ function gameOver() {
     //show the total score
     const totalScore = getElementsValueById('score')
     setElementsValueById('total-score', totalScore);
+    //remove the last highlight from alphabet
+    const lastAlphabet = getElementTextById('alphabet-to-show');
+    removeHighlightAlphabets(lastAlphabet);
 }

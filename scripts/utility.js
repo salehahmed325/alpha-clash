@@ -23,6 +23,13 @@ function setElementsValueById(elementId, value) {
     element.innerText = value;
 }
 
+//get element text
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    return elementText;
+}
+
 //highlight the random alphabet
 function highlightAlphabets(elementId){
     const element = document.getElementById(elementId);
