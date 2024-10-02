@@ -39,7 +39,12 @@
     font-style: normal;
 }
 
-.highlight-alphabet{
+.highlight-alphabet {
     color: #010313;
     background-color: #FFA500;
+}
+
+.highlight-wrong-alphabet {
+    color: #010313;
+    background-color: #ff4d00;
 }

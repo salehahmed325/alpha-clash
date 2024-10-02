@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Daisy UI and Tailwind -->
+    <!--Daisy UI and Tailwind-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom CSS -->
+    <!--Custom CSS-->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <!-- Home Section -->
+        <!--Home Section-->
         <section id="home" class="min-h-screen text-white flex justify-center items-center">
             <div class="flex flex-col gap-10 items-center">
                 <h1 class="anton-regular text-[170px]">ALPHABET CLASH</h1>
@@ -22,9 +22,9 @@
                 <button onclick="start()" class="btn btn-white poppins-semibol text-2xl">Start</button>
             </div>
         </section>
-        <!-- Playground Section -->
+        <!--Playground Section-->
         <section id="play-ground" class="flex flex-col gap-11 pt-10 hidden">
-            <!-- Screen -->
+            <!--Screen-->
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="artboard artboard-horizontal phone-6 border-[15px] border-[#010313CC] rounded-2xl bg-[#FFFFFFBC]">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Keyboard -->
+            <!--Keyboard-->
             <div>
                 <div class="my-1 flex w-full justify-center gap-1">
                     <kbd id="q" class="kbd">q</kbd>
@@ -73,15 +73,15 @@
                     <kbd id="/" class="kbd">/</kbd>
                 </div>
             </div>
-            <!-- Life and Score -->
+            <!--Life and Score-->
             <div class="flex items-center pr-28 pl-28 justify-between">
-                <!-- Life -->
+                <!--Life-->
                 <div class="w-36 h-14 bg-[#894189] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
                     Life
                     <img src="images/life.svg" alt="">
                     <span id="life">5</span>
                 </div>
-                <!-- Score -->
+                <!--Score-->
                 <div class="w-36 h-14 bg-[#360490] rounded-full border-none text-white glass flex justify-center items-center gap-1 inter-medium text-xl">
                     Score
                     <img src="images/score.svg" alt="">
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <!-- Final Score Section -->
+        <!--Final Score Section-->
         <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="flex flex-col justify-center items-center gap-3 w-[396px] h-72 glass rounded-2xl bg-[#FFFFFF33]">
                 <h1 class="poppins-extrabold text-[64px] text-white">Score : <span id="total-score">14</span></h1>
